@@ -1,0 +1,21 @@
+# OpenOptimizer CMake configuration file
+#
+# This file is configured by CMake and provides a way for other CMake projects
+# to find and use the OpenOptimizer library.
+
+@PACKAGE_INIT@
+
+# Find dependencies (if they are not already found by the consuming project)
+# Example: find_dependency(spdlog @spdlog_VERSION_STRING@ REQUIRED)
+# Example: find_dependency(MLIR @MLIR_VERSION_STRING@ REQUIRED)
+# Example: find_dependency(TVM @TVM_VERSION_STRING@)
+
+# Include the targets file
+include("${CMAKE_CURRENT_LIST_DIR}/OpenOptimizerTargets.cmake")
+
+# Set variables for include directories and library paths
+set(OpenOptimizer_INCLUDE_DIRS "@PACKAGE_INCLUDE_INSTALL_DIR@")
+set(OpenOptimizer_LIBRARY_DIRS "@PACKAGE_LIB_INSTALL_DIR@")
+
+# Check for required components (if any are defined in the future)
+# check_required_components(OpenOptimizer) 

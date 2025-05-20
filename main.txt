@@ -1,0 +1,29 @@
+## **OpenOptimizer: Neural Network Optimization Framework**
+
+Develop a comprehensive neural network optimization framework named OpenOptimizer, built with C++20 for performance-critical components and Python 3.11 for high-level interfaces. OpenOptimizer aims to be the leading solution for deploying machine learning models efficiently across a diverse range of hardware targets, from high-performance cloud servers to resource-constrained edge devices and specialized AI accelerators.
+
+**Core Goals:**
+- **Peak Performance:** Achieve state-of-the-art inference speeds and minimal resource footprint through advanced optimization techniques and hardware-specific code generation.
+- **Broad Applicability:** Support a wide array of model architectures (CNNs, Transformers, GNNs, etc.) and ML frameworks (PyTorch, TensorFlow, ONNX, JAX).
+- **Developer-Friendly:** Provide intuitive APIs, comprehensive documentation, and powerful visualization tools to simplify the optimization workflow.
+- **Extensibility:** Design a modular and extensible architecture that allows researchers and developers to easily integrate new optimization passes, hardware backends, and frontend importers.
+- **Production-Readiness:** Ensure robustness, reliability, and scalability for real-world deployment scenarios.
+
+**Key Technologies & Methodologies:**
+- **Compilation Stack:** Utilize TVM (0.13.0+) for tensor computation optimization and as a backend for diverse hardware targets. Leverage MLIR for a flexible and powerful multi-level intermediate representation.
+- **Hardware Acceleration:** Deep integration with CUDA (12.2.0+) for NVIDIA GPU acceleration. Planned support for other GPU vendors (AMD ROCm, Intel oneAPI) and specialized AI hardware (e.g., NPUs, TPUs via TVM).
+- **Optimization Strategies:** Implement a rich set of graph optimizations (operator fusion, constant folding, layout transformation, dead code elimination), algorithmic optimizations for NP-hard problems (e.g., graph partitioning, scheduling) using advanced heuristics, simulated annealing, and evolutionary algorithms. Incorporate advanced mathematical optimization techniques for tensor computation, model pruning (structured and unstructured), quantization (post-training and quantization-aware training support), and precision reduction.
+- **Cross-Platform Visualization:** Develop a Qt (6.5.2+) based desktop application with QML for interactive neural network graph visualization, performance analysis dashboards, and step-through debugging of optimization passes. Ensure M3 Max with Metal acceleration is leveraged for visualization rendering and lightweight compilation tasks on macOS.
+- **Simulation & Profiling:** Provide robust simulation frameworks for evaluating optimization strategies before deployment and detailed performance analysis tools for identifying and resolving bottlenecks.
+- **Edge Deployment:** Feature integration with edge-specific deployment tools and runtime systems (e.g., TVM runtime, TensorFlow Lite, ONNX Runtime Mobile).
+- **Software Engineering Practices:** Maintain a high standard of code quality with comprehensive logging (spdlog 1.12.0+ for C++, structlog 23.1.0+ for Python), a CI/CD pipeline using GitHub Actions for automated testing (unit, integration, regression) and benchmarking, and detailed documentation (Doxygen for C++, Sphinx for Python, and comprehensive optimization technique guides).
+
+**Technical Highlights:**
+- **Hybrid IR Approach:** Combines the strengths of MLIR for high-level graph representation and TVM's Relay/TE for low-level tensor optimizations, enabling a flexible and powerful optimization pipeline.
+- **Automated Target-Aware Optimization:** Sophisticated heuristics and learning-based methods to automatically select and configure optimization passes based on the target hardware profile.
+- **Dynamic Shape Support:** Robust handling of models with dynamic input shapes throughout the optimization and code generation process.
+- **Unified Quantization Workflow:** A streamlined process for applying various quantization techniques, from simple post-training quantization to more complex quantization-aware training integration.
+- **Extensible Code Generator Backend:** A plugin-style architecture for the code generator, making it easier to add support for new custom hardware or instruction sets.
+- **Interactive Debugging of Optimizations:** Visualization tools that not only show the graph transformations but also allow users to inspect intermediate states and understand the impact of each optimization pass.
+
+This framework is designed for a seamless development experience in modern IDEs like Cursor, with full Language Server Protocol (LSP) support for both C++ and Python components, facilitating navigation, auto-completion, and refactoring.

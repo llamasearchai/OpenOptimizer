@@ -1,0 +1,27 @@
+include LICENSE
+include README.md
+include requirements.txt
+include CMakeLists.txt
+include OpenOptimizer.svg
+include main.txt
+
+recursive-include cmake *
+recursive-include ir *
+recursive-include codegen *
+recursive-include frontend *
+recursive-include optimization *
+recursive-include tests *
+recursive-include visualization *
+recursive-include docs *
+
+# Exclude build artifacts and temporary files
+global-exclude *.py[cod]
+global-exclude __pycache__
+global-exclude *.so
+global-exclude *.dylib
+global-exclude *.dll
+global-exclude .DS_Store
+global-exclude .git*
+global-exclude build/
+global-exclude dist/
+global-exclude *.egg-info/ 

@@ -1,0 +1,15 @@
+numpy>=1.21.0,<1.27.0 # Updated numpy version and upper bound
+torch>=2.0.1,<2.2.0      # PyTorch with upper bound, aligned with main.txt
+tensorflow>=2.12.0,<2.14.0 # TensorFlow with upper bound, aligned with main.txt
+tvm==0.13.0             # Pinned TVM for now, as in CMake and main.txt
+structlog>=23.1.0,<24.0.0 # Logging library
+scipy>=1.9.0,<1.12.0      # Scientific computing, updated upper bound
+matplotlib>=3.5.0,<3.8.0  # Plotting library
+networkx>=2.8.0,<3.2.0    # Graph library
+pytest>=7.0.0,<8.0.0      # Testing framework, updated upper bound
+onnx>=1.13.0,<1.15.0     # ONNX for model interoperability
+protobuf<4.0             # Protocol Buffers, often a dependency for ONNX/TF
+# For development and type checking (optional, usually in a dev-requirements.txt)
+# mypy>=1.0.0
+# ruff>=0.1.0
+# pre-commit 
